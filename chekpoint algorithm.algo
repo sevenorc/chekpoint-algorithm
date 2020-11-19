@@ -1,0 +1,24 @@
+ALGORITHM Checkpoint_Algo
+VAR
+    S: STRING;
+    L: INTEGER;
+    W: INTEGER:=0;
+    V: INTEGER:=0;
+    i: INTEGER:=0;
+BEGIN
+    Read(S);
+    REPEAT
+        IF (S[i]=' ') THEN
+        W:=W+1;
+        ELSE_IF (S[i]='a' or S[i]='e' or S[i]='o' or S[i]='u' or S[i]='y' or S[i]='i') THEN
+            V:=V+1;
+        END_IF
+        i:=i+1;
+        L:=i;
+    UNTIL (S[i]='.')
+
+    Write('Length= ',L+1); // if counting the '.' as a part of the length //
+    Write('Number of words= ',W+1);
+    Write('Number of Vowels= ',V);
+
+END
